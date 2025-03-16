@@ -29,7 +29,7 @@ source ec2_env/bin/activate  # On Windows use: ec2_env\Scripts\activate
 
 ### 3️⃣ Install dependencies
 ```bash
-pip install -r requirements.txt
+pip install -r req.txt
 ```
 
 ## Running the API
@@ -37,7 +37,7 @@ pip install -r requirements.txt
 ```bash
 python server.py
 ```
-API will be available at: `http://127.0.0.1:5000`
+API will be available at: `http://127.0.0.1:8888`
 
 ### On AWS EC2
 ```bash
@@ -52,7 +52,7 @@ The API will run in the background, accessible via the public IP of the EC2 inst
 
 ### Example Request
 ```bash
-curl -X POST "http://<EC2_PUBLIC_IP>:5000/predict" -H "Content-Type: application/json" -d '{"features": [7.4, 0.7, 0.0, 1.9, 0.076, 11.0, 34.0, 0.9978, 3.51, 0.56, 9.4]}'
+curl -X POST "http://<EC2_PUBLIC_IP>:8888/predict" -H "Content-Type: application/json" -d '{"features": [7.4, 0.7, 0.0, 1.9, 0.076, 11.0, 34.0, 0.9978, 3.51, 0.56, 9.4]}'
 ```
 
 ## Deployment on AWS EC2
